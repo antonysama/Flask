@@ -1,7 +1,8 @@
 docker build --tag flask:latest .
 #running interractive after comenting out last couple lines:
-docker run -it --entrypoint /bin/bash flask:latest
-#one more level of interactivity
-python
+docker run -it -v $(pwd)/apps:/app flask:latest /bin/bash
+#run app
+python app.py
 #check
-import flask
+#import flask
+ 
