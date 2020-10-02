@@ -12,7 +12,7 @@ def index():
 @app.route('/puppy/<name>') # Fill this in!
 def puppylatin(name):
     if name.endswith('y'):
-        lname =name+'ful'
+        lname =name[:-1]+'ful'
     else:
         lname=name+'y'
     return '<h1>This is a page for {}<h1>'.format(lname)
